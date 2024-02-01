@@ -1,0 +1,20 @@
+[package]
+name = "max14578e-driver"
+version = "0.1.0"
+authors = ["Alex Moon"]
+edition = "2021"
+description = "An embedded async driver for the MAX14578E/MAX14578AE USB charger detector."
+documentation = "https://docs.rs/max14578e-driver"
+repository = "https://github.com/tactile-eng/max14578e-driver"
+license = "Apache-2.0"
+keywords = ["embedded-hal-driver", "max14578e", "charger-detector", "usb"]
+categories = ["no-std", "embedded", "asynchronous", "hardware-support"]
+
+[features]
+"default" = []
+"defmt-03" = ["embedded-hal-async/defmt-03", "dep:defmt"]
+
+[dependencies]
+defmt = { version = "0.3", optional = true }
+embedded-hal-async = "1.0.0"
+modular-bitfield = "0.11.2"
